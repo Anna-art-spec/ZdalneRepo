@@ -15,3 +15,4 @@ pizza2 = pole1 / pizza2_cena
 print("Stosunki wielkości pizzy do ceny")
 print(f"pizza1: {pole1 / pizza1_cena}")
 print(f"pizza2: {pole2 / pizza2_cena}")
+print("Dziękuję")
