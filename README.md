@@ -14,18 +14,18 @@ def wyswietl_ponumerowane_pliki():                                              
     lista = os.listdir()
     ponumerowane_pliki = [f"[{numer}] {plik}" for numer, plik in enumerate(lista, start=1)]
 
-    # Wyświetl wszystkie ponumerowane pliki w jednej linii
+    # Wyświetla wszystkie ponumerowane pliki w jednej linii
     print(" ".join(ponumerowane_pliki))
 
 def utworz_nowy_plik():                                                                             #tworzy nowy plik
     while True:
         nazwa_pliku = input("Wpisz nazwę nowego pliku i naciśnij Enter: ")
 
-        if nazwa_pliku.strip():  # Sprawdź, czy nazwa pliku nie jest pusta
+        if nazwa_pliku.strip():  # Sprawdza, czy nazwa pliku nie jest pusta
             try:
                 with open(nazwa_pliku, 'w') as plik:
                     print(f"Plik o nazwie '{nazwa_pliku}' został utworzony.")
-                break  # Przerwij pętlę, jeśli plik został utworzony poprawnie
+                break  # Przerywa pętlę, jeśli plik został utworzony poprawnie
             except Exception as e:
                 print(f"Wystąpił błąd podczas tworzenia pliku: {e}")
         else:
@@ -64,11 +64,11 @@ def przejdz_do_katalogu():                                                      
     while True:
         nazwa_katalogu = input("Wpisz nazwę katalogu, do którego chcesz przejść: ")
 
-        if nazwa_katalogu.strip():  # Sprawdź, czy nazwa katalogu nie jest pusta
-            if os.path.isdir(nazwa_katalogu):  # Sprawdź, czy podana nazwa istnieje jako katalog
-                os.chdir(nazwa_katalogu)  # Zmień bieżący katalog na podany
+        if nazwa_katalogu.strip():  # Sprawdza, czy nazwa katalogu nie jest pusta
+            if os.path.isdir(nazwa_katalogu):  # Sprawdza, czy podana nazwa istnieje jako katalog
+                os.chdir(nazwa_katalogu)  # Zmienia bieżący katalog na podany
                 print(f"Przejście do katalogu '{nazwa_katalogu}' zostało zakończone.")
-                break  # Przerwij pętlę, jeśli udało się przejść do katalogu
+                break  # Przerywa pętlę, jeśli udało się przejść do katalogu
             else:
                 print("Podany katalog nie istnieje. Spróbuj ponownie.")
         else:
@@ -107,7 +107,7 @@ def zmien_nazwe_pliku(stara_nazwa, nowa_nazwa):                                 
         print(f"Wystąpił błąd podczas zmiany nazwy pliku: {e}")
 
 def wyszukaj_w_pliku(nazwa_pliku, szukany_tekst):                                                        #wyszukuje tekst w pliku
-    try: 
+    try:
         with open(nazwa_pliku, 'r', encoding='utf-8') as plik:
             znaleziono = False
             for numer_linii, linia in enumerate(plik, start=1):
@@ -125,13 +125,13 @@ def wyszukaj_w_pliku(nazwa_pliku, szukany_tekst):                               
 while True:
     def main():
         while True:
-            # Pobierz bieżącą ścieżkę dostępu
+            # Pobiera bieżącą ścieżkę dostępu
             sciezka = os.getcwd()
 
-            # Wyświetl ścieżkę dostępu
+            # Wyświetla ścieżkę dostępu
             print(f"Aktualna ścieżka dostępu: {sciezka}")
 
-            # Wprowadź komendę od użytkownika
+            # Wprowadza komendę od użytkownika
             komenda = input("wpisz komendę z listy: ")
 
             if komenda == 'help':
@@ -223,7 +223,7 @@ while True:
                 sys.exit()
 
 
-            # Wykonaj komendę
+            # Wykonuje komendę
             os.system(komenda)
 
     if __name__ == "__main__":
