@@ -1,11 +1,13 @@
-help             | Wyświetla sposób użycia programu oraz informacje o komendach
-quit | exit      | Kończy program
-ls               | Wyświetla pliki
-cr <nazwa>       | Tworzy plik o podanej nazwie
-cd <katalog>     | Przejście do katalogu
-powrót           | Powrót do wcześniejszego katalogu
-mkdir <katalog>  | Tworzy katalog o podanej nazwie
-o <filename>     | Wyświetl zawartość pliku tekstowego
-start <filename> | Podsumuj zawartość pliku: ilość znaków
-rename <n1> <n2> | Zmienia nazwę pliku <n1> na <n2>
-find <p> <file>  | Wyświetla linijki z pliku <file>, w którym znaleziono tekst <p>
+help              | Wyświetla sposób użycia programu oraz informacje o komendach
+quit | exit       | Kończy program
+ls                | Wyświetla pliki
+cr <nazwa>        | Tworzy plik o podanej nazwie
+delcr <nazwa>     | Usuwa plik o podanej nazwie
+cd <katalog>      | Przejście do katalogu
+powrót            | Powrót do wcześniejszego katalogu
+mkdir <katalog>   | Tworzy katalog o podanej nazwie
+delmkdir <katalog>| Usuwa katalog o podanej nazwie
+o <filename>      | Wyświetl zawartość pliku tekstowego
+start <filename>  | Podsumuj zawartość pliku: ilość znaków
+rename <n1> <n2>  | Zmienia nazwę pliku <n1> na <n2>
+find <p> <file>   | Wyświetla linijki z pliku <file>, w którym znaleziono tekst <p>
